@@ -21,7 +21,7 @@ This seed repo serves as an Angular starter for anyone looking to get up and run
 
 ```bash
 # clone our repo
-$ git clone https://github.com/preboot/angular-webpack.git my-app
+$ git clone git@github.com:steelx/angular4-starter.git my-app
 
 # change directory to your app
 $ cd my-app
