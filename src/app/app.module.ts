@@ -10,22 +10,12 @@ import { ApiService } from './shared';
 import { routing } from './app.routing';
 
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
+import { TodoService } from './shared/todos.service';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    HttpModule,
-    FormsModule,
-    routing
-  ],
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    AboutComponent
-  ],
-  providers: [
-    ApiService
-  ],
+  imports: [BrowserModule, HttpModule, FormsModule, routing],
+  declarations: [AppComponent, HomeComponent, AboutComponent],
+  providers: [ApiService, TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
@@ -34,7 +24,9 @@ export class AppModule {
     console.log('HMR store', store);
   }
   hmrOnDestroy(store) {
-    let cmpLocation = this.appRef.components.map(cmp => cmp.location.nativeElement);
+    let cmpLocation = this.appRef.components.map(
+      cmp => cmp.location.nativeElement
+    );
     // recreate elements
     store.disposeOldHosts = createNewHosts(cmpLocation);
     // remove styles
