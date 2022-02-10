@@ -70,7 +70,7 @@
     "karma-remap-istanbul": "0.6.0",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "4.0.2",
-    "node-sass": "^4.5.0",
+    "node-sass": "^7.0.0",
     "null-loader": "3.0.0",
     "postcss-loader": "^3.0.0",
     "protractor": "^5.4.2",
